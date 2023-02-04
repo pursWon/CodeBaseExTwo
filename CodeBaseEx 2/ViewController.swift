@@ -1,7 +1,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     let rainbowStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.spacing = 20
@@ -84,7 +83,7 @@ class ViewController: UIViewController {
         let stackView = UIStackView()
         stackView.backgroundColor = .cyan
         stackView.axis = .vertical
-        stackView.spacing = 20
+        stackView.spacing = 30
         stackView.distribution = .fillEqually
         stackView.alignment = .leading
         return stackView
@@ -175,6 +174,7 @@ class ViewController: UIViewController {
         
         centerView.translatesAutoresizingMaskIntoConstraints = false
         whiteView.translatesAutoresizingMaskIntoConstraints = false
+        
         textStackView.translatesAutoresizingMaskIntoConstraints = false
         textLabelOne.translatesAutoresizingMaskIntoConstraints = false
         textLabelTwo.translatesAutoresizingMaskIntoConstraints = false
@@ -184,6 +184,7 @@ class ViewController: UIViewController {
     }
     
     func setTextLabel() {
+        /// textLabel의 모음 배열
         let textLabels: [UILabel] = [textLabelOne, textLabelTwo, textLabelThree, textLabelFour, textLabelFive]
         textLabels.forEach {
             $0.backgroundColor = .white
@@ -194,8 +195,5 @@ class ViewController: UIViewController {
         textLabelThree.text = "안녕하"
         textLabelFour.text = "안녕하세"
         textLabelFive.text = "안녕하세요"
-        
-        textLabelOne.sizeThatFits(CGSize(width: 3, height: 5))
     }
 }
-
